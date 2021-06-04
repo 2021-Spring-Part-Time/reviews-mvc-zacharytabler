@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/podcastStyle.css">
+    <title>The Barbell Buddha Podcast with Chris Moore</title>
+</head>
+
+<body>
+<header>
+    <div class="header-image">
+    <img src="images\Header.png">
+    </div>
+    </header>
+<div class="intro">
+    <div class="chris-image">
+        <img src="images\ChrisMoore.jpg">
+</div>
+<div class="intro-paragraph">
+    <h2> Welcome to The Barbell Buddha Podcast Review Site!</h2>
+    <p>The online review catalog dedicated to recapping all 100 episodes of the Barbell Buddha Podcast.</p>
+    <p> This is a project I hope to have completed by Fall 2021. </p>
+    <p>The Barbell Buddha Podcast was hosted by Chris Moore, affectionately known in the strength community as the "Barbell Buddha." The show ran for exactly 100 episodes from 2013 to 2016 before Chris tragically passed away. It didn't matter if you were interested in training, philosophy, religion, coffee, drugs, relationship advice, or were just looking for some perspective or inspiration, Chris had something for you.</p>
+    <p> My personal journey with the Barbell Buddha Podcast began in the spring of 2020. When the COVID-19 outbreak began, my family was forced to make a difficult choice. Due to my job being public facing at Amazon, and my wife having an unspecified auto immune condition, we decided to split our household. My wife and daughters moved in with my parents, and I was home alone. The days were lonely, and one way I found to pass time was taking walks. I began listening to podcasts while I walked and that's how I found Chris. I had no idea how much at the time I needed those walks and this podcast. I hope the podcast helps you as much as it helps me.   </p>
+    </div>
+</div>
+<main>
+    <div th:each="podcast: ${podcastsModel}"><a th:href="@{/podcast(id=${podcast.id})}">
+        <h3 th:text="${podcast.podcastName}"></h3>
+        <img th:src="${podcast.podcastImage}"></a>
+        </div>
+</main>
+
+<footer>
+    <small>&copy Zachary Tabler 2021</small>
+</footer>
+
+</body>
+</html>

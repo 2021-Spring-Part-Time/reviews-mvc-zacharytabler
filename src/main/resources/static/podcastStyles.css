@@ -1,0 +1,36 @@
+body{
+    background-color: aliceblue;
+}
+
+header{
+    margin-bottom: 20px;
+}
+
+header h1{
+    text-align: center;
+}
+
+.header-image{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: normal;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.pod-desc{
+    padding-left: 10px;
+}
+
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
