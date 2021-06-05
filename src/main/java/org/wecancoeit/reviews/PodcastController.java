@@ -20,7 +20,7 @@ public class PodcastController {
     }
 
     @RequestMapping("/podcast")
-    public String findOneCourse(@RequestParam(value= "id") Long id, Model model) {
+    public String findOneCourse(@RequestParam(value = "id") Long id, Model model) {
         model.addAttribute("podcastModel", podcastRepository.findOne(id));
         return "podcastTemplate";
     }

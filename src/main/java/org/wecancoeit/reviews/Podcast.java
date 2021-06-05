@@ -22,7 +22,9 @@ public class Podcast {
         return description;
     }
 
-    public String getPodcastImage() {return podcastImage;}
+    public String getPodcastImage() {
+        return podcastImage;
+    }
 
     public String getQuote() {
         return quote;

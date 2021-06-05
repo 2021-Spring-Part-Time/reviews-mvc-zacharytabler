@@ -36,18 +36,12 @@ public class PodcastControllerMvcTest {
     }
 
     @Test
-    public void shouldFindAllPodcastsInModel() throws Exception{
+    public void shouldFindAllPodcastsInModel() throws Exception {
         Collection<Podcast> allPodcastsInModel = Arrays.asList(podcastTwo, podcastThree);
         when(podcastRepo.findAll()).thenReturn(allPodcastsInModel);
         mockMvc.perform(get("/podcasts"))
                 .andExpect(model().attribute("podcastsModel", allPodcastsInModel));
 
-    }
-
-    @Test
-    public void shouldBeOkForOnePodcastInThePodcastTemplate() throws Exception {
-        mockMvc.perform(get("/podcast?id=2")).andExpect(status().isOk())
-                .andExpect(view().name("podcastTemplate"));
     }
 
     @Test

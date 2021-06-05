@@ -1,12 +1,12 @@
-body{
+body {
     background-color: aliceblue;
 }
 
-header{
+header {
     margin-bottom: 15px;
 }
 
-.header-image{
+.header-image {
     height: 450px;
     width: 100%;
     display: flex;
@@ -23,7 +23,7 @@ header{
 
 }
 
-.intro-paragraph{
+.intro-paragraph {
     padding-left: 10px;
 }
 
@@ -41,7 +41,7 @@ main h3 {
     text-align: center;
 }
 
-footer{
+footer {
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
