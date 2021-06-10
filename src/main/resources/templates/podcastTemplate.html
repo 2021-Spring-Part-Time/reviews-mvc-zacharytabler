@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/podcastStyles.css">
+    <title th:text="${podcastModel.podcastName}"> The Barbell Buddha Podcast </title>
+</head>
+<body>
+<header>
+    <div class="header-image">
+    <img src="images\Header.png">
+    </div>
+    <h1 th:text="${podcastModel.podcastName}"></h1>
+</header>
+
+
+<main>
+    <div class ="pod-image">
+    <img th:src="${podcastModel.podcastImage}"></a>
+    </div>
+    <div class="pod-desc">
+    <p th:text="${podcastModel.description}"></p>
+        <h3 th:text="${podcastModel.quote}"></h3>
+    </div>
+</main>
+<div class="links">
+    <img src="/images/ApplePodcast.png" alt="Apple Podcast Logo">
+    <a href th:text="${podcastModel.applePodcast}" target="_blank"></a>
+</div>
+
+<div class ="home">
+        <p><a href="/podcasts">Return Home</a></p>
+</div>
+
+<footer>
+    <small>&copy Zachary Tabler 2021</small>
+</footer>
+
+</body>
+</html>
